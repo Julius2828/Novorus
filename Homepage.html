@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novorus Wiki</title>
+    <link rel="stylesheet" href="styless.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edwardian+Script+ITC&display=swap');
+
+        html,body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .banner {
+            position: relative;
+        }
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
+        .banner h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: gold;
+            font-size: 200px;
+            font-family: 'Edwardian Script ITC', cursive;
+            margin: 0;
+        }
+
+        header, main, footer {
+            flex-shrink: 0;
+        }
+
+        header, .footer, .header-tabs {
+            background-color: #2f2f2f; /* Darker background */
+        }
+
+        .footer-tabs, .header-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .footer-tabs a, .header-tabs a {
+            text-decoration: none;
+            color: gold; /* Golden text */
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            flex: 1 0 auto;
+            display: flex;
+        }
+
+        .main-content {
+            flex: 3; /* Extend the middle part to fill the new space */
+            padding: 20px;
+            background: #555;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px; /* Adjust top margin to clear the header */
+			margin-bottom: 45px;
+			margin-left: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar {
+            flex: 1;
+            margin-top: 30px; /* Adjusted to move 3 pixels up */
+			margin-bottom: 280px;
+            position: relative;
+            right: -175px; /* Move sidebar further right */
+            background: #555; /* Match background color of middle section */
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .sidebar p, .main-content p {
+            margin: 0 0 10px;
+        }
+        .sidebar a {
+            display: block;
+            color: gold;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .about-us {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .about-us h2 {
+            font-family: Arial, sans-serif;
+            color: gold;
+        }
+
+        .about-us p {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .discord-widget img {
+            width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="https://i.imgur.com/Aj5509Z.png" alt="Banner">
+            <h1>Novorus</h1>
+        </div>
+        <div class="header-tabs">
+            <a href="https://novorus.craftingstore.net/"><b>Home</b></a>
+            <a href="https://julius2828.github.io/Novorus/"><b>Wiki</b></a>
+            <a href="https://novorus.craftingstore.net/category/450741"><b>Support</b></a>
+            <a href="https://novorus.craftingstore.net/category/450744"><b>Stats</b></a>
+            <a href="https://novorus.craftingstore.net/category/450747"><b>Shop</b></a>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <section id="server-news">
+                <h1 style="color:gold"><b>Server News</b></h1>
+				<img src="https://i.imgur.com/mpWZXgZ.png">
+                <h2 style="color:gold">Die Arbeit am Server geht immer weiter voran!</h2>
+				<p>Mit viel Arbeit wird aktuell sehr viel Content zum Server hinzugefügt.</p>
+				<p>Was wurde die letzte Woche geändert?</p>
+				<h3 style="color:gold">Kasino Games hinzugefügt</h3>
+				<p>Schach, 4-Gewinnt, Coinflip, Spin The Wheel, Roulette, Slots u. Kisten Öffnungen wie CS:GO!</p>
+				<p>Finde mehr über die Spielmodi raus im <a href="https://julius2828.github.io/Novorus/#kasino">Wiki</a>.</p>
+                <!-- Add more news content here -->
+            </section>
+        </div>
+        <aside class="sidebar">
+            <div class="server-ip">
+                <h3 style="color:gold;">Server IP</h3>
+                <p style="color:white;"><b>Novorus.de</b></p>
+            </div>
+            <div class="discord-widget">
+                <h3 style="color:gold;">Unser Discord</h3>
+                <a href="https://discord.gg/V9JEEdfzB2">
+                    <img src="https://i.imgur.com/dW0zNJC.png" alt="Discord Widget" style="width: 50%; max-width: 500px;">
+                </a>
+            </div>
+            <div class="twitter-feed">
+                <h3 style="color:gold;">Tweets von Novorus</h3>
+                <a class="twitter-timeline" data-width="350" data-height="500" href="https://twitter.com/Novorus_de?ref_src=twsrc%5Etfw">Tweets by Novorus_de</a> 
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="footer-tabs">
+            <a href="#kontakt"><b>Kontakt</b></a>
+            <a href="#nutzungsbedingungen"><b>Nutzungsbedingungen</b></a>
+            <a href="#datenschutz"><b>Datenschutz</b></a>
+            <a href="#hilfe"><b>Hilfe</b></a>
+            <a href="#impressum"><b>Impressum</b></a>
+        </div>
+        <div class="about-us">
+            <h2><b>Über uns</b></h2>
+            <p>Wir sind ein Team aus drei Leuten, die mit den vorhandenen Minecraft-Servern unzufrieden waren. Daher haben wir beschlossen, unseren eigenen Server zu erstellen, der unsere Vorstellung von einem qualitativ hochwertigen Server widerspiegelt.</p>
+            <p>Novorus ist ein Communityprojekt, das 2024 gestartet wurde.</p>
+        </div>
+    </footer>
+</body>
+</html>
