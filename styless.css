@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    max-width: 100%;
+    filter: blur(10px);
+    padding-left: 2px;
+}
+
+nav {
+    background-color: #ccc8c8;
+    padding: 25px;
+}
+
+nav h2 {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main 
+    padding: 20px;
+    text-align: center; /* Center-align the text in the main content */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #121111;
+    text-align: left; /* Left-align the headings */
+    padding-left: 0.5%; /* Adjust the left padding to position the headings */
+
+}
+
+p {
+    text-align: left; /* Ensure paragraph text is centered */
+    padding-left: 2%; /* Adjust the left padding to position the headings */
+
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 1px left; /* Center-align the image */
+    padding-left: 2%; /* Adjust the left padding to position the headings */
+}
