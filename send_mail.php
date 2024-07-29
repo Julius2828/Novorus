@@ -15,11 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: $name <$email>";
 
         if (mail($to, $subject, $email_content, $headers)) {
-            echo "Thank you for your message. It has been sent.";
+            header("Location: https://julius2828.github.io/Novorus/Homepage");
+            exit;
         } else {
             echo "Oops! Something went wrong, and we couldn't send your message.";
         }
     } else {
         echo "There was a problem with your submission. Please complete the form and try again.";
     }
+} else {
+    echo "There was a problem with your submission. Please complete the form and try again.";
 }
+?>
