@@ -98,7 +98,7 @@
 
         .form-group input,
         .form-group textarea {
-            width: 100%;
+            width: 95%;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -114,7 +114,7 @@
         button {
             background-color: #007bff;
             color: #fff;
-            padding: 15px 20px;
+            padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -133,7 +133,7 @@
             <h1>Novorus</h1>
         </div>
         <div class="header-tabs">
-            <a href="https://novorus.craftingstore.net/"><b>Home</b></a>
+            <a href="https://julius2828.github.io/Novorus/Homepage"><b>Home</b></a>
             <a href="https://julius2828.github.io/Novorus/"><b>Wiki</b></a>
             <a href="https://novorus.craftingstore.net/category/450741"><b>Support</b></a>
             <a href="https://novorus.craftingstore.net/category/450744"><b>Stats</b></a>
@@ -142,7 +142,7 @@
     </header>
     <main>
         <div class="contact-form-container">
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" action="send_mail.php" method="post">
                 <h2>Contact Us</h2>
                 <div class="form-group">
                     <label for="name">Name:</label>
@@ -173,29 +173,10 @@
             <a href="#impressum"><b>Impressum</b></a>
         </div>
         <div class="about-us">
-            <h2><b>Über uns</b></h2>
+            <h2 style="color:gold"><b>Über uns</b></h2>
             <p>Wir sind ein Team aus drei Leuten, die mit den vorhandenen Minecraft-Servern unzufrieden waren. Daher haben wir beschlossen, unseren eigenen Server zu erstellen, der unsere Vorstellung von einem qualitativ hochwertigen Server widerspiegelt.</p>
             <p>Novorus ist ein Communityprojekt, das 2024 gestartet wurde.</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const formData = new FormData(this);
-
-            fetch('send_mail.php', {
-                method: 'POST',
-                body: formData
-            }).then(response => response.text())
-              .then(data => {
-                  alert(data);
-                  window.location.href = 'https://julius2828.github.io/Novorus/Homepage';
-              }).catch(error => {
-                  alert('There was a problem with your submission. Please try again.');
-                  console.error('Error:', error);
-              });
-        });
-    </script>
 </body>
 </html>
