@@ -15,15 +15,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $headers = "From: $name <$email>";
 
         if (mail($to, $subject, $email_content, $headers)) {
-            header("Location: https://julius2828.github.io/Novorus/Homepage");
-            exit;
+            echo "<script type='text/javascript'>
+                    alert('Thank you for your message. It has been sent.');
+                    window.location.href = 'https://julius2828.github.io/Novorus/Homepage';
+                  </script>";
         } else {
-            echo "Oops! Something went wrong, and we couldn't send your message.";
+            echo "<script type='text/javascript'>
+                    alert('Oops! Something went wrong, and we couldn\'t send your message.');
+                    window.location.href = 'https://julius2828.github.io/Novorus/Homepage';
+                  </script>";
         }
     } else {
-        echo "There was a problem with your submission. Please complete the form and try again.";
+        echo "<script type='text/javascript'>
+                alert('There was a problem with your submission. Please complete the form and try again.');
+                window.history.back();
+              </script>";
     }
 } else {
-    echo "There was a problem with your submission. Please complete the form and try again.";
+    echo "<script type='text/javascript'>
+            alert('There was a problem with your submission. Please complete the form and try again.');
+            window.history.back();
+          </script>";
 }
 ?>
