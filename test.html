@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Web Stats</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module">
+        import WebStats from "./WebStats-dist.js";
+        
+        window.addEventListener("load", () => {
+            const stats = new WebStats({
+                host: "45.89.143.232:20061",
+                tableParent: document.getElementById("webstats-tables"),
+                updateInterval: 10_000,
+                showSkins: true,
+                displayCount: 100,
+            });
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <span>
+            <input type="checkbox" name="compact" id="compact" class="webstats-option">
+            <label for="compact">Compact</label>
+        </span>
+        <span>
+            <input type="checkbox" name="hide-offline" id="hide-offline" class="webstats-option">
+            <label for="hide-offline">Hide offline players</label>
+        </span>
+        <span class="webstats-status">
+            <span class="webstats-loading-indicator">Loading...</span>
+            <span class="webstats-error-message"></span>
+        </span>
+        
+        <div id="webstats-tables">
+            <table id="webstats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Kills</th>
+                        <th>Deaths</th>
+                        <th>Playtime</th>
+                        <th>Mob Kills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="skin"><img src="path/to/skin.png" alt="%player_name%"></td>
+                        <td>%player_name%</td>
+                        <td>%statistic_player_kills%</td>
+                        <td>%statistic_deaths%</td>
+                        <td>%statistic_time_played%</td>
+                        <td>%statistic_mob_kills%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
